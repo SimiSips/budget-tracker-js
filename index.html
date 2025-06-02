@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
         <div class="container">
             <h1>Budget Tracker</h1>
 
@@ -15,25 +14,24 @@
             <div class="summary">
                 <div class="card">
                     <h3>Income</h3>
-                    <div class="amount income" id="totalIncome">R</div>
+                    <div class="amount income" id="totalIncome">R0</div>
                 </div>
                 <div class="card">
                     <h3>Expenses</h3>
-                    <div class="amount expense" id="totalExpenses">R</div>
+                    <div class="amount expense" id="totalExpenses">R0</div>
                 </div>
                 <div class="card">
                     <h3>Balance</h3>
-                    <div class="amount balance" id="balance">R</div>
+                    <div class="amount balance" id="balance">R0</div>
                 </div>
             </div>
 
-            
             <!-- Add transaction -->
             <div class="form-section">
                 <h3>Add Transaction</h3>
                 <div class="form-row">
                     <input type="text" id="description" placeholder="Description">
-                    <input type="number" id="amount" placeholder="Amount">
+                    <input type="number" id="amount" placeholder="Amount" step="0.01">
                     <select id="type">
                         <option value="Income">Income</option>
                         <option value="Expense">Expense</option>
@@ -46,7 +44,9 @@
             <div>
                 <h3>Recent Transactions</h3>
                 <div id="transactionsList">
-                    <p>No transactions yet. Add one above!</p>
+                    <div class="empty-message">
+                        <p>No transactions yet. Add one above!</p>
+                    </div>
                 </div>
             </div>
         </div>
